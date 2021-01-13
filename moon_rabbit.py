@@ -46,21 +46,6 @@ async def ping(ctx, number: int):
     await ctx.send(number)
 
 
-@app.command(name='시발아')
-async def bad_word(ctx):
-    await ctx.send('ㅇㅅㅇ...')
-
-
-@app.command(name='개새끼야')
-async def ping(ctx):
-    await ctx.send('ㅇㅅㅇ...')
-
-
-@app.command(name='시발')
-async def ping(ctx):
-    await ctx.send('외욕헤;;;')
-
-
 @app.command(name='잘자')
 async def ping(ctx):
     await ctx.send('https://blogimg.goo.ne.jp/user_image/44/3a/b2ec2e835264fc5abae347e8721f1748.gif')
