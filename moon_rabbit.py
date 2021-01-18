@@ -13,13 +13,20 @@ from boto.s3.connection import S3Connection
 app = commands.Bot(command_prefix="#")
 
 discord_api_key = os.environ.get('discord_api_key')
-discord_api_key = os.environ.get('neople_api_key')\
+discord_api_key = os.environ.get('neople_api_key')
+
+GOOGLE_CHROME_PATH = '/app/.apt/usr/bin/google_chrome'
+CHROMEDRIVER_PATH = '/app/.chromedriver/bin/chromedriver'
+
 print(discord_api_key)
 browser_options = webdriver.ChromeOptions()
 browser_options.add_argument('headless')
 browser_options.add_argument('window-size=1920x1080')
 browser_options.add_argument("disable-gpu")
-browser = webdriver.Chrome('chromedriver', options=browser_options)
+browser_options.add_argument('--no-sandbox')
+browser_options.binary_location = GOOGLE_CHROME_PATH
+
+browser = webdriver.Chrome(CHROMEDRIVER_PATH, options=browser_options)
 
 
 @app.event
