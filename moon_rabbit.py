@@ -7,13 +7,12 @@ from selenium import webdriver
 import server_name_converter
 import time
 import os
-from boto.s3.connection import S3Connection
 
 
 app = commands.Bot(command_prefix="#")
 
 discord_api_key = os.environ.get('discord_api_key')
-discord_api_key = os.environ.get('neople_api_key')
+neople_api_key = os.environ.get('neople_api_key')
 
 GOOGLE_CHROME_PATH = '/app/.apt/usr/bin/google_chrome'
 CHROMEDRIVER_PATH = '/app/.chromedriver/bin/chromedriver'
