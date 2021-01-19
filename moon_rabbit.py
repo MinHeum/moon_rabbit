@@ -14,15 +14,14 @@ app = commands.Bot(command_prefix="#")
 discord_api_key = os.environ.get('discord_api_key')
 neople_api_key = os.environ.get('neople_api_key')
 
-GOOGLE_CHROME_PATH = '/app/.apt/usr/bin/google_chrome'
-CHROMEDRIVER_PATH = '/app/.chromedriver/bin/chromedriver'
+print(discord_api_key)
+print(neople_api_key)
 
 browser_options = webdriver.ChromeOptions()
 browser_options.add_argument('headless')
 browser_options.add_argument('window-size=1920x1080')
 browser_options.add_argument("disable-gpu")
 browser_options.add_argument('--no-sandbox')
-browser_options.binary_location = GOOGLE_CHROME_PATH
 
 browser_options.binary_location = os.environ.get("GOOGLE_CHROME_BIN")
 browser = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), chrome_options=browser_options)
