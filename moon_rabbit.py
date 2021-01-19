@@ -25,7 +25,7 @@ browser_options.add_argument("disable-gpu")
 browser_options.add_argument('--no-sandbox')
 browser_options.binary_location = GOOGLE_CHROME_PATH
 
-chrome_options.binary_location = os.environ.get("GOOGLE_CHROME_BIN")
+browser_options.binary_location = os.environ.get("GOOGLE_CHROME_BIN")
 browser = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), chrome_options=browser_options)
 
 
