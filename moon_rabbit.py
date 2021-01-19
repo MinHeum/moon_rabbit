@@ -14,9 +14,6 @@ app = commands.Bot(command_prefix="#")
 discord_api_key = os.environ.get('discord_api_key')
 neople_api_key = os.environ.get('neople_api_key')
 
-print(discord_api_key)
-print(neople_api_key)
-
 browser_options = webdriver.ChromeOptions()
 browser_options.add_argument('headless')
 browser_options.add_argument('window-size=1920x1080')
